@@ -1,0 +1,24 @@
+{
+  "name": "@mystroken/drag",
+  "version": "0.1.0",
+  "description": "Hold and drag library",
+  "main": "index.js",
+  "author": "Mystro Ken <mystroken@gmail.com>",
+  "license": "MIT",
+  "scripts": {},
+  "homepage": "https://github.com/mystroken/drag#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mystroken/drag.git"
+  },
+  "keywords": [
+    "drag",
+    "slider",
+    "slide",
+    "hold-and-drag",
+    "creativecoding"
+  ],
+  "bugs": {
+    "url": "https://github.com/mystroken/drag/issues"
+  }
+}
