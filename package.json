@@ -11,6 +11,9 @@
     "type": "git",
     "url": "git+https://github.com/mystroken/drag.git"
   },
+  "files": [
+    "index.js"
+  ],
   "keywords": [
     "drag",
     "slider",
