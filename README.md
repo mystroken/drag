@@ -9,14 +9,28 @@ A lightweight "hold and drag" library. No dependencies, vanilla js.
 ```npm install @mystroken/drag``` and start using the **hold and drag** system.
 
 ```javascript
+let currentX = 0;
+let currentY = 0;
+const slidable = document.querySelector('#slidable');
+const container = document.querySelector('#container');
+
+// Initialize the library.
 const options = {
-  listener: document.getElementById('container'),
+  listener: container,
   multiplier: 2
 };
-
 const drag = new Drag(options);
+
+// Store the cursor position on move.
 drag.on(event => {
-    const currentX = event.x;
-    const currentY = event.y;
+  currentX = event.x;
+  currentY = event.y;
 });
+
+// Use the cursor position to slide the container.
+const move = () => {
+  slidable.style.transform = `translate3d(${currentX}px, ${currentY}px, 0px)`;
+  requestAnimationFrame(move);
+};
+requestAnimationFrame(move);
 ```
