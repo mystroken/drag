@@ -2,11 +2,7 @@
 
 A lightweight "hold and drag" library. No dependencies, vanilla js.
 
-![](scscreenshot.gif)
-
-
-
-
+![](https://github.com/mystroken/drag/raw/master/screenshot.gif)
 
 ### Getting started
 
@@ -24,5 +20,3 @@ drag.on(event => {
     const currentY = event.y;
 });
 ```
-
-
