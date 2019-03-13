@@ -1,10 +1,14 @@
-# :left_right_arrow: :surfer: drag
+# :surfer: drag
 
 A lightweight "hold and drag" utility. No dependencies, vanilla js.
 
+<p>
+➝ [See the online demo (Advanced example)](https://mzy8p5n678.codesandbox.io/)
+</p>
+
 ![](https://github.com/mystroken/drag/raw/master/screenshot.gif)
 
-➝ [See the online demo (Advanced example)](https://mzy8p5n678.codesandbox.io/)
+
 
 ## Usage
 
