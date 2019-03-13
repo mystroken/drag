@@ -5,9 +5,9 @@
 [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=A%20lightweight%20utility%20to%20do%20%22hold%20and%20drag%22.&url=https://github.com/mystroken/drag&via=mystroken&hashtags=holdanddrag,slider,drag,js,creativecoding,developers)
 
 <blockquote>
-@mystroken/drag is a lightweight JavaScript "hold and drag" utility.
+@mystroken/drag is a lightweight JavaScript "hold and drag" utility. Vanilla JS - No dependencies.
 <br>
-~619B (minified and compressed), Vanilla JS - No dependencies.
+Size: ~619B (minified and compressed)
 </blockquote>
 
 ![](https://github.com/mystroken/drag/raw/master/screenshot.gif)
