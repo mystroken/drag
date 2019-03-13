@@ -6,12 +6,9 @@
 
 > A lightweight "hold and drag" utility. No dependencies, vanilla js.
 
-➝ [See the online demo (Advanced example)](https://mzy8p5n678.codesandbox.io/)
-
-<br>
-
 ![](https://github.com/mystroken/drag/raw/master/screenshot.gif)
 
+➝ [See the online demo (Advanced example)](https://mzy8p5n678.codesandbox.io/)
 
 ## Usage
 
