@@ -38,8 +38,8 @@ const drag = new Drag(options);
 
 // Store the cursor position on move.
 drag.on(event => {
-  currentX = event.x;
-  currentY = event.y;
+  currentX = event.X;
+  currentY = event.Y;
 });
 
 // Use the cursor position to slide the slidable element.

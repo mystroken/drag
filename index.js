@@ -7,24 +7,24 @@
 function Drag(options) {
 
 	this._event = {
-		x: 0,
-    y: 0,
+		X: 0,
+    Y: 0,
     cursorDown: false,
-		startCursorX: 0, // The X position of the cursor on start.
-		startCursorY: 0, // The Y position of cursor on start.
+		initialX: 0, // The X position of the cursor on start.
+		initialY: 0, // The Y position of cursor on start.
 		originalEvent: null
   };
 
+  this.initialized = false;
+  this.curDown = false; // True if cursor is down.
+  this.numListeners = 0;
+  this.listeners = [];
   this.listener = options.listener || window;
   this.multiplier = options.multiplier || 1;
-  this.curDown = false; // True if cursor is down.
-  this.initialized = false;
-  this.listeners = [];
-  this.numListeners = 0;
 
-  this._onMouseDown = this._onMouseDown.bind(this);
-  this._onMouseMove = this._onMouseMove.bind(this);
-  this._onMouseUp = this._onMouseUp.bind(this);
+  this._onDragStart = this._onDragStart.bind(this);
+  this._onDrag = this._onDrag.bind(this);
+  this._onDragEnd = this._onDragEnd.bind(this);
   this._onMouseLeave = this._onMouseLeave.bind(this);
   this._notify = this._notify.bind(this);
 
@@ -43,16 +43,16 @@ Drag.prototype.off = function(f) {
 };
 
 Drag.prototype._notify = function(e) {
-  const targetX = (e.pageX - this._event.startCursorX) * this.multiplier;
-  const targetY = (e.pageY - this._event.startCursorY) * this.multiplier;
+  const targetX = (e.pageX - this._event.initialX) * this.multiplier;
+  const targetY = (e.pageY - this._event.initialY) * this.multiplier;
 
-  this._event.x = targetX;
-  this._event.y = targetY;
+  this._event.X = targetX;
+  this._event.Y = targetY;
   this._event.originalEvent = e;
   this._event.cursorDown = this.curDown;
 
-  this._event.startCursorX = e.pageX;
-  this._event.startCursorY = e.pageY;
+  this._event.initialX = e.pageX;
+  this._event.initialY = e.pageY;
 
   for(var i = 0; i < this.numListeners; i++) {
     this.listeners[i](this._event);
@@ -60,41 +60,40 @@ Drag.prototype._notify = function(e) {
 };
 
 // Event Listeners.
-Drag.prototype._onMouseMove = function(e) {
+Drag.prototype._onDrag = function(e) {
   if(this.curDown){
     e.preventDefault();
     this._notify(e);
   }
 };
 
-Drag.prototype._onMouseDown = function(e) {
-  this._event.startCursorX = e.pageX;
-  this._event.startCursorY = e.pageY;
+Drag.prototype._onDragStart = function(e) {
+  this._event.initialX = e.pageX;
+  this._event.initialY = e.pageY;
   this.curDown = true;
   //this._notify(e);
 };
 
-Drag.prototype._onMouseUp = function(e) {
+Drag.prototype._onDragEnd = function(e) {
   this.curDown = false;
   //this._notify(e);
 };
 
 Drag.prototype._onMouseLeave = function(e) {
-  this.curDown = false;
-  //this._notify(e);
+  this._onDragEnd(e);
 };
 
 Drag.prototype._addListeners = function() {
-  this.listener.addEventListener('mouseup', this._onMouseUp);
-  this.listener.addEventListener('mousedown', this._onMouseDown);
-  this.listener.addEventListener('mousemove', this._onMouseMove);
+  this.listener.addEventListener('mouseup', this._onDragEnd);
+  this.listener.addEventListener('mousedown', this._onDragStart);
+  this.listener.addEventListener('mousemove', this._onDrag);
   this.listener.addEventListener('mouseleave', this._onMouseLeave);
 };
 
 Drag.prototype._removeListeners = function() {
-  this.listener.removeEventListener('mousemove', this._onMouseMove);
-  this.listener.removeEventListener('mousedown', this._onMouseDown);
-  this.listener.removeEventListener('mouseup', this._onMouseUp);
+  this.listener.removeEventListener('mousemove', this._onDrag);
+  this.listener.removeEventListener('mousedown', this._onDragStart);
+  this.listener.removeEventListener('mouseup', this._onDragEnd);
   this.listener.removeEventListener('mouseleave', this._onMouseLeave);
 };
 
