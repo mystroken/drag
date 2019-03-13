@@ -28,6 +28,7 @@ function Drag(options) {
 	this.hasTouchWinEvent = navigator.msMaxTouchPoints && navigator.msMaxTouchPoints > 1;
   this.hasPointerEvent = !!window.navigator.msPointerEnabled;
   this.isTouch = this.hasTouchEvent || this.hasTouchWinEvent || this.hasPointerEvent;
+  this.msTouchAction = null;
 
   // Context binding.
   this._onDragStart = this._onDragStart.bind(this);
@@ -108,6 +109,7 @@ Drag.prototype._addListeners = function() {
   }
 
   if (this.hasPointerEvent && this.hasTouchWinEvent) {
+    this.msTouchAction = this.listener.style.msTouchAction;
     this.listener.style.msTouchAction = "none";
 
     this.listener.addEventListener('MSPointerMove', this._onDrag);
@@ -133,6 +135,8 @@ Drag.prototype._removeListeners = function() {
   }
 
   if (this.hasPointerEvent && this.hasTouchWinEvent) {
+    if (this.msTouchAction) this.listener.style.msTouchAction = this.msTouchAction;
+
     this.listener.removeEventListener('MSPointerMove', this._onDrag);
     this.listener.removeEventListener('MSPointerUp', this._onDragEnd);
     this.listener.removeEventListener('MSPointerDown', this._onDragStart);
