@@ -12,7 +12,7 @@ Its size is ~619 B (minified and compressed).
 
 ![](https://github.com/mystroken/drag/raw/master/screenshot.gif)
 
-➝ [See the online demo (Advanced example)](https://mzy8p5n678.codesandbox.io/)
+➝ [See the online demo (Advanced example)](https://mystroken.github.io/drag/)
 
 ## Usage
 
