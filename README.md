@@ -4,7 +4,7 @@ A lightweight "hold and drag" library. No dependencies, vanilla js.
 
 ![](https://github.com/mystroken/drag/raw/master/screenshot.gif)
 
-[➝ See the online demo (Advanced example)](https://mzy8p5n678.codesandbox.io/)
+➝ [See the online demo (Advanced example)](https://mzy8p5n678.codesandbox.io/)
 
 ## Usage
 
