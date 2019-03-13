@@ -43,8 +43,8 @@ Drag.prototype.off = function(f) {
 };
 
 Drag.prototype._notify = function(e) {
-  const targetX = (e.pageX - this._event.initialX) * this.multiplier;
-  const targetY = (e.pageY - this._event.initialY) * this.multiplier;
+  var targetX = (e.pageX - this._event.initialX) * this.multiplier;
+  var targetY = (e.pageY - this._event.initialY) * this.multiplier;
 
   this._event.X = targetX;
   this._event.Y = targetY;
