@@ -1,6 +1,6 @@
-# drag
+# :left_right_arrow: :surfer: drag
 
-A lightweight "hold and drag" library. No dependencies, vanilla js.
+A lightweight "hold and drag" utility. No dependencies, vanilla js.
 
 ![](https://github.com/mystroken/drag/raw/master/screenshot.gif)
 
