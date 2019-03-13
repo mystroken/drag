@@ -4,17 +4,22 @@ A lightweight "hold and drag" library. No dependencies, vanilla js.
 
 ![](https://github.com/mystroken/drag/raw/master/screenshot.gif)
 
-[➝ See advanced demo](https://mzy8p5n678.codesandbox.io/)
+[➝ See the online demo (Advanced example)](https://mzy8p5n678.codesandbox.io/)
 
 ### Getting started
 
 ```npm install @mystroken/drag``` and start using the **hold and drag** system.
 
 ```javascript
-let currentX = 0;
-let currentY = 0;
+import Drag from '@mystroken/drag';
+
+// Elements to listen/move.
 const slidable = document.querySelector('#slidable');
 const container = document.querySelector('#container');
+
+// Where to store the drag position.
+let currentX = 0;
+let currentY = 0;
 
 // Initialize the library.
 const options = {
