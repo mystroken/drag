@@ -43,9 +43,9 @@ drag.on(event => {
 });
 
 // Use the cursor position to slide the slidable element.
-const move = () => {
+requestAnimationFrame(move);
+function move() {
   slidable.style.transform = `translate3d(${currentX}px, ${currentY}px, 0px)`;
   requestAnimationFrame(move);
-};
-requestAnimationFrame(move);
+}
 ```
