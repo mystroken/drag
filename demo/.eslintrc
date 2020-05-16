@@ -1,0 +1,20 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": false
+  },
+  "globals": {
+    "document": true
+  },
+  "rules": {
+    // Disallow or Enforce Dangling Commas
+    // No trailing commas
+    // http://eslint.org/docs/rules/comma-dangle
+    "comma-dangle": ["error", "never"],
+    // Disallow or enforce spaces inside of brackets
+    // [ 1 ], not [1]
+    // http://eslint.org/docs/rules/array-bracket-spacing
+    "array-bracket-spacing": ["error", "always"]
+  }
+}
