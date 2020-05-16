@@ -1,22 +1,31 @@
-# :computer: :ghost: nanou
-> Webpack configuration to have CodePen on local... lol
+# :computer: :surfer: Drag demo source code
 
-## Usage
-#### 1. Clone the project
+> An advanced example of how you can use the library
+
+<br><br>
+
+## Get up and running
+
+##### 1. Clone the project
+
 ```bash
-git clone https://github.com/mystroken/nanou.git project
+git clone https://github.com/mystroken/drag.git && cd drag/demo
 ```
-#### 2. Delete .git folder
-```bash
-cd project && rm -rf .git/
-```
-#### 3. Install node dependencies
+
+##### 2. Install node dependencies
+
 ```bash
 npm install
 ```
-#### 4. Start typing your code
+
+##### 3. Start typing your code
+
 ```bash
+# Run dev
 npm run start
+
+# Build
+npm run build
 ```
 
 These command-lines will open a new tab on your default browser. Each change made on your project will reload the tab.

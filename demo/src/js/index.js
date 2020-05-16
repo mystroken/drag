@@ -1,4 +1,7 @@
 import Drag from '@mystroken/drag';
+import clamp from '@mystroken/g/clamp';
+import round from '@mystroken/g/round';
+
 require('../sass/index.scss');
 
 const slider = document.querySelector('.slider');
@@ -6,7 +9,6 @@ const container = document.querySelector('.slider__items');
 
 let vWidth = window.innerWidth;
 let mWidth = container.getBoundingClientRect().width;
-
 
 const cursor = slider.querySelector('.cursor');
 let cursorWidth = 0;
@@ -24,10 +26,8 @@ const cursorScale = {
   target: 1
 };
 
-
 const ease = .09;
 let target = 0, current = 0, rAF = null;
-
 
 const options = {
   listener: slider,
@@ -35,9 +35,6 @@ const options = {
 };
 const drag = new Drag(options);
 drag.on(calc);
-//drag.onMove(calc);
-//drag.onStart();
-//drag.onEnd();
 
 slider.addEventListener('mouseenter', () => {
   cursor.classList.add('is-visible');
@@ -79,7 +76,7 @@ function moveCursor() {
   // Compute the current scale.
   cursorScale.current += (cursorScale.target - cursorScale.current) * .06;
   // Move the cursor.
-  cursor.style.transform = `translate3d(${cursorPos.currentX.toFixed(2)}px, ${cursorPos.currentY.toFixed(2)}px, 0px) scale(${cursorScale.current.toFixed(2)})`;
+  cursor.style.transform = `translate3d(${round(cursorPos.currentX)}px, ${round(cursorPos.currentY)}px, 0px) scale(${round(cursorScale.current)})`;
   requestAnimationFrame(moveCursor);
 }
 requestAnimationFrame(moveCursor);
@@ -89,7 +86,7 @@ function moveSlider() {
   current += offset * ease;
 
   // Move the slider content container.
-  container.style.transform = `translate3d(${current.toFixed(2)}px,0,0)`;
+  container.style.transform = `translate3d(${round(current)}px,0,0)`;
 
   // Stop the loop if there is no move to do.
   rAF = (offset.toFixed(2) == 0.00) ? null : requestAnimationFrame(moveSlider);
@@ -97,7 +94,7 @@ function moveSlider() {
 
 const clampTarget = function() {
   const max = mWidth - vWidth;
-  target = Math.min(0, Math.max(target, -1 * max));
+  target = clamp(target, -1*max, 0);
 };
 
 const onResize = () => {
