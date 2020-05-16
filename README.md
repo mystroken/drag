@@ -13,6 +13,7 @@ Its size is ~619 B (minified and compressed).
 ![](https://github.com/mystroken/drag/raw/master/screenshot.gif)
 
 ➝ [See the online demo (Advanced example)](https://mystroken.github.io/drag/)
+➝ :fire: [See the demo source code](https://github.com/mystroken/drag/tree/master/demo)
 
 ## Usage
 
