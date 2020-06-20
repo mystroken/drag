@@ -1,6 +1,7 @@
 # :surfer: drag
 
 
+![GitHub last commit](https://img.shields.io/github/last-commit/mystroken/drag)
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/@mystroken/drag)
 ![npm](https://img.shields.io/npm/dw/@mystroken/drag)
 ![npm](https://img.shields.io/npm/v/@mystroken/drag)
