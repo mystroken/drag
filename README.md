@@ -1,10 +1,10 @@
 # :surfer: drag
 
 
-![GitHub last commit](https://img.shields.io/github/last-commit/mystroken/drag)
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/@mystroken/drag)
 ![npm](https://img.shields.io/npm/dw/@mystroken/drag)
 ![npm](https://img.shields.io/npm/v/@mystroken/drag)
+![GitHub last commit](https://img.shields.io/github/last-commit/mystroken/drag)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/mystroken/drag/issues)
 [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=A%20lightweight%20utility%20to%20do%20%22hold%20and%20drag%22.&url=https://github.com/mystroken/drag&via=mystroken&hashtags=holdanddrag,slider,drag,js,creativecoding,developers)
 
