@@ -10,7 +10,7 @@
   "author": "Mystro Ken <mystroken@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@mystroken/drag": "^0.1.0",
+    "@mystroken/drag": "^0.2",
     "@mystroken/g": "^0.0.14"
   },
   "devDependencies": {

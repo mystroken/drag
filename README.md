@@ -66,7 +66,7 @@ function move() {
 
 ### listener
 
-Determines the DOM element on which apply the hold and drag feature.
+Determines the DOM element on which to apply the hold and drag feature.
 
 | Default    | Type        |
 |:---------- |:----------- |
@@ -86,7 +86,7 @@ Set a speed multiplier for the movement (the normal speed is 1).
 # Methods
 
 ### on(callback)
-subscribes a callback function to listen any "hold and drag" operation.
+Subscribes a callback function to listen any "hold and drag" operation.
 
 ```javascript
 drag.on(function(event) {
@@ -102,7 +102,7 @@ drag.on(function(event) {
 
 
 ### off(callback)
-unsubscribes the callback function from listening operations.
+Unsubscribes the callback function from listening operations.
 
 | Argument  | Type      | Params                                                                           | Required |
 |:--------- |:--------- | -------------------------------------------------------------------------------- | -------- |
