@@ -66,7 +66,7 @@ function move() {
 
 ### listener
 
-Determines the DOM element on where apply the hold and drag feature.
+Determines the DOM element on which apply the hold and drag feature.
 
 | Default    | Type        |
 |:---------- |:----------- |
