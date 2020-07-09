@@ -10,8 +10,7 @@
 [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=A%20lightweight%20utility%20to%20do%20%22hold%20and%20drag%22.&url=https://github.com/mystroken/drag&via=mystroken&hashtags=holdanddrag,slider,drag,js,creativecoding,developers)
 
 <blockquote>
-A lightweight JavaScript "hold and drag" utility. Vanilla JS - No dependencies.
-<br>
+A lightweight JavaScript "hold and drag" utility. Vanilla JS - No dependencies.<br>
 Its size is ~619 B (minified and compressed).
 </blockquote>
 
@@ -21,7 +20,10 @@ Its size is ~619 B (minified and compressed).
 <br>
 ➝ [See the demo source code](https://github.com/mystroken/drag/tree/master/demo):fire::fire:
 
-## Usage
+<br>
+<br>
+
+# Usage
 
 ```npm install @mystroken/drag``` and start using the **hold and drag** system.
 
@@ -56,3 +58,52 @@ function move() {
   requestAnimationFrame(move);
 }
 ```
+
+<br>
+<br>
+
+# Options
+
+### listener
+
+Determines the DOM element on where apply the hold and drag feature.
+
+| Default    | Type        |
+|:---------- |:----------- |
+| `window`   | DOM Element |
+
+### multiplier
+
+Set a speed multiplier for the movement (the normal speed is 1).
+
+| Default | Type  |
+|:------- |:----- |
+| `1`     | `int` |
+
+<br>
+<br>
+
+# Methods
+
+### on(callback)
+subscribes a callback function to listen any "hold and drag" operation.
+
+```javascript
+drag.on(function(event) {
+  // Start consuming the event data.
+  currentX = event.X;
+  currentY = event.Y;
+});
+```
+
+| Argument  | Type      | Params                                                                           | Required |
+|:--------- |:--------- | -------------------------------------------------------------------------------- | -------- |
+| callback | `Function` | An event object giving the current X & Y positions of the mouse on the container | Yes      |
+
+
+### off(callback)
+unsubscribes the callback function from listening operations.
+
+| Argument  | Type      | Params                                                                           | Required |
+|:--------- |:--------- | -------------------------------------------------------------------------------- | -------- |
+| callback | `Function` | An event object giving the current X & Y positions of the mouse on the container | Yes      |

@@ -7,8 +7,8 @@ require('../sass/index.scss');
 const slider = document.querySelector('.slider');
 const container = document.querySelector('.slider__items');
 
-let vWidth = window.innerWidth;
-let mWidth = container.getBoundingClientRect().width;
+let vWidth = 0;
+let mWidth = 0;
 
 const cursor = slider.querySelector('.cursor');
 let cursorWidth = 0;
@@ -107,6 +107,6 @@ const onResize = () => {
   clampTarget();
   rAF = requestAnimationFrame(moveSlider);
 };
-window.addEventListener('resize', onResize);
 
+window.addEventListener('resize', onResize);
 onResize();
