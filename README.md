@@ -11,7 +11,7 @@
 
 <blockquote>
 A lightweight JavaScript "hold and drag" utility. Vanilla JS - No dependencies.<br>
-Its size is ~619 B (minified and compressed).
+Its size is ~867 Bytes (minified and compressed).
 </blockquote>
 
 ![](https://github.com/mystroken/drag/raw/master/screenshot.gif)
